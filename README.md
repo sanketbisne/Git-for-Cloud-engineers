@@ -1,13 +1,9 @@
-There are 3 Stages of code in local repository
+There are 4 Stages of code in local repository
 
-- Working Directory
-
-- git add .
-code entered in staging area
-- git commit -m "added code "
-code added in local repository
--git push 
-code added in remote repository
+  1. Working Directory
+  2. code entered in staging area
+  3. code added in local repository
+  4. code added in remote repository
 
 ## Below are the Steps for getting started with git and pushing those changes in remote repo.
 
