@@ -156,20 +156,10 @@ if dev branch has  local changes , and you dont want to commit those changes, an
 -move to another branch say master
 -git checkout master
 -again come to your Dev branch 
--type `git stash pop` start your work where you left off.
+-type `git stash pop` start your work where you left off. and now you can get back to your work and continue.
 
 Thank you
  
-
-it will take your local changes and store temporary.
-
->> git checkout master
->> git checkout master
-
-git stash pop
-
-now you can get back to your work and continue.
-
 I will add more content like 
 git reset,  git cherry-pick , git reset --hard HEAD~n etc
 
