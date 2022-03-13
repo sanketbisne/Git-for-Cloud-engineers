@@ -55,9 +55,14 @@ git log
  
 Create a Repository in Google Cloud from the below command or for Console.
 
-> Go to Github>> Click on Create new  Repo
+> Go to Github
+
+> Click on Create new  Repo
+
 > Decide to make it Public or Private
+
 > Add Description
+
 > Click on Create
 
 - Go to Local machine
