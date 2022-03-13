@@ -1,4 +1,4 @@
-<h3> Hey Everyone , In this Repository I have covered some Basic Git Commands that are used Daily For the Job Role of Cloud / DevOps Engineer.
+<h3> Hey Everyone , In this Repository I have covered some Basic Git Commands that are used Daily For the Job Role of Cloud / DevOps Engineer. </h3>
 -------------------------------------------------------------------------------------------------------------
 
 We will Start by What is Git to Pushing our very First code to Remote Repository
