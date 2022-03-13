@@ -18,35 +18,45 @@ git config --global user.name <username>
 git config --global user.email <email>
 
 - `Creating a Directory`
+ 
 mkdir my-data
 
 - `Navigating to Directory`
+ 
 cd   my-data
 
 - `Initialize the Repository`
+ 
 git init
 
 - `Create the Sample File`
+ 
 touch sample.txt
 
 - `Check the Untracked / Tracked Files`
+ 
 git status
 
 - `Add the files from your working directory to Staging Area (specific file)`
+ 
 git add sample.txt
 
 OR 
 
 `Add the files from your working directory to Staging Area(all files)`
+ 
 git add .
 
 - `Save Changes to Your Local Repository and Capture a Snapshot of staged changes`
+ 
 git commit -m "Your message here"
 
 -`To Display the commit value and shows the history of local repository`
+ 
 git log
 
--`Now Add our Google Cloud Source Repository`1
+-`Now Add our Google Cloud Source Repository`
+ 
 Create a Repository in Google Cloud from the below command or for Console.
 
 > Go to Github>> Click on Create new  Repo
@@ -62,7 +72,7 @@ Create a Repository in Google Cloud from the below command or for Console.
 
 - initialise Git in that Folder
 
-git init
+ git init
 
 - Add your remote repository url
 
@@ -70,41 +80,53 @@ git remote add origin https://github.com/<your username>/<your repo name>.git
 
 
 ` To set the Remote Upstream`
+ 
 > git push --set-upstream origin master
 
 > git push -u origin master
+ 
 `Do some changes in file and push in repo`
+ 
 nano sample.txt
 add some content > "hello v1"
 
 git add sample.txt
+ 
 git commit -m "added hello v1"
+ 
 git push
 
 `To Create a New Branch and Switch to branch`
+ 
 git checkout -b dev
 
 `To Switch to another / Master Branch`
+ 
 git checkout master
 
 ` Merge the Changes to master `
+ 
 git merge dev
 
 ` To see  the Branches `
+ 
 git branch
 
 ` To Delete the Branch `
+ 
 git branch -d dev
 
 ` To Pull the Latest Code on repository`
+ 
 git pull
 
 ` To revert any commited changes`
+ 
 - git log
 - git revert <commit_id>
 
-`clone the existing repository`/
-
+`clone the existing repository`
+ 
 - git clone  <your remote repo name>
 - git add 
 - git commit -m "your message"
