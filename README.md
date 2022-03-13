@@ -1,4 +1,29 @@
-There are 4 Stages of code in local repository
+<h3> Hey Everyone , In this Repository I have covered some Basic Git Commands that are used Daily For the Job Role of Cloud / DevOps Engineer.
+-------------------------------------------------------------------------------------------------------------
+
+We will Start by What is Git to Pushing our very First code to Remote Repository
+
+What is Git?
+Git is a Version Control System to Track our Code and will keep a track of records of who changes what and when?
+
+What is Github / GitLab / Bitbucket / Google Source Repository / CodeCommit
+So Simply, these are all Remote Repository to Host Our Code
+
+Google Source Repository and Amazon CodeCommit and Private Repository which are been used and are restricted and accessed securely by giving IAM Roles on  project.
+
+Before Hosting Our Code on Remote Repository , We can to Run that Code Locally on our VM or Our PC.
+
+After the code is initialized , added and commited , then the code can be pushed to any remote repository.
+
+As Everyday we use only 3 commands  to be frank, ie
+
+- git add
+- git commit 
+- git push
+
+But git is more beyond that , and understanding Basic concepts properly will give you edge over others and make you a good engineer.
+
+So basically there are 4 Stages of code in local repository
 
   1. Working Directory
   2. code entered in staging area
