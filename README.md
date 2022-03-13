@@ -9,7 +9,7 @@ code added in local repository
 -git push 
 code added in remote repository
 
-# Below are the Steps for getting started with git and pushing those changes in remote repo.
+## Below are the Steps for getting started with git and pushing those changes in remote repo.
 
 `To sets the author name and email address respectively to be used with your commits.`
 
