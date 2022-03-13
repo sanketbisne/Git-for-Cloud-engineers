@@ -105,7 +105,7 @@ git pull
 
 `clone the existing repository`/
 
-- git clone ssh://sanket.bisne@searce.com@source.developers.google.com:2022/p/searce-playground/r/sanket-gsr-repository
+- git clone  <your remote repo name>
 - git add 
 - git commit -m "your message"
 - git push 
