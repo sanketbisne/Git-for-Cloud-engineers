@@ -7,7 +7,7 @@ There are 4 Stages of code in local repository
 
 ## Below are the Steps for getting started with git and pushing those changes in remote repo.
 
-`To sets the author name and email address respectively to be used with your commits.`
+`To set the author name and email address respectively to be used with your commits.`
 
 git config --global user.name <username>
 
