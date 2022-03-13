@@ -102,15 +102,15 @@ OR
 
 - Add your remote repository url
 
-  git remote add origin https://github.com/<your username>/<your repo name>.git
+  git remote add origin <https://github.com/<your username>/<your repo name>.git>
 
-` To set the Remote Upstream`
- 
+ `To set the Remote Upstream`
+
  git push --set-upstream origin master
 
  git push -u origin master
  
-`Do some changes in file and push in repo`
+ `Do some changes in file and push in repo`
  
   nano sample.txt
   add some content > "hello v1"
@@ -121,11 +121,11 @@ OR
 
   git push
 
-`To Create a New Branch and Switch to branch`
+ `To Create a New Branch and Switch to branch`
  
  git checkout -b dev
 
-`To Switch to another / Master Branch`
+ `To Switch to another / Master Branch`
  
  git checkout master
 
@@ -174,6 +174,14 @@ folders - build/
 git restore --staged <filename>   ( for specific file)
 git restore --staged .            ( for all current staged files.)
 
+## To remove commit  and delete by one
+
+git reset --hard HEAD~1
+
+## To remove commit  and move back to staging area
+
+git reset --soft HEAD~1
+
 ## To remove specific commit  and delete it
 
 git reset --hard <commit id >
@@ -181,14 +189,15 @@ git reset --hard <commit id >
 ## To Stash your incomplete work and to move to another branch / Save WIP changes
 
 if dev branch has  local changes , and you dont want to commit those changes, and want to move into another branch say master.
--your current branch -> Dev
--your incomplete work
--you  do `git stash` to save your incomplete work in temporary memory
--now your work is saved 
--move to another branch say master
--git checkout master
--again come to your Dev branch 
--type `git stash pop` start your work where you left off. and now you can get back to your work and continue.
+
+- your current branch -> Dev
+- your incomplete work
+- you  do `git stash` to save your incomplete work in temporary memory
+- now your work is saved 
+- move to another branch say master
+- git checkout master
+- again come to your Dev branch 
+- type `git stash pop` start your work where you left off. and now you can get back to your work and continue.
 
 Thank you
  
