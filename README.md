@@ -32,51 +32,63 @@ So basically there are 4 Stages of code in local repository
 
 ## Below are the Steps for getting started with git and pushing those changes in remote repo.
 
-`To set the author name and email address respectively to be used with your commits.`
+Installing Git in Linux
 
-git config --global user.name <username>
+First step is to open a terminal and install Git by using the below command:
 
-git config --global user.email <email>
+`sudo apt install git`
 
-- `Creating a Directory`
+Confirm the git installation by checking for a git version:
 
-   mkdir my-data
+`git --version`
 
-- `Navigating to Directory`
+To set the author name and email address respectively to be used with your commits.
 
-   cd  my-data
+`git config --global user.name "your name"`
 
-- `Initialize the Repository`
+`git config --global user.email "your email"`
 
-   git init
+Open your terminal on VM / Linux / or Gitbash
 
-- `Create the Sample File`
+- Creating a Directory
 
-   touch sample.txt
+   `mkdir my-data`
 
-- `Check the Untracked / Tracked Files`
+- Navigating to Directory
+
+   `cd  my-data`
+
+- Initialize the Repository
+
+   `git init`
+
+- Create the Sample File
+
+   `touch sample.txt`
+
+- Check the Untracked / Tracked Files
  
-   git status
+   `git status`
 
-- `Add the files from your working directory to Staging Area (specific file)`
+- Add the files from your working directory to Staging Area (specific file)
  
-   git add sample.txt
+   `git add sample.txt`
 
 OR 
 
-  `Add the files from your working directory to Staging Area(all files)`
+  Add the files from your working directory to Staging Area(all files)
  
-   git add .
+   `git add .`
 
-- `Save Changes to Your Local Repository and Capture a Snapshot of staged changes`
+- Save Changes to Your Local Repository and Capture a Snapshot of staged changes
  
-  git commit -m "Your message here"
+  `git commit -m "Your message here"`
 
--`To Display the commit value and shows the history of local repository`
+- To Display the commit value and shows the history of local repository
  
-  git log --oneline --graph 
+  `git log --oneline --graph `
 
--`Now Lets add our remote repo`
+- Now Lets add our remote repo
  
   Create a Repository in Google Cloud / Gitlab / Github / BitBucket from the below command or for Console.
 
@@ -92,66 +104,62 @@ OR
 
 - Go to Local machine
 
-- Create a Folder
-
-  mkdir data
-
-- initialise Git in that Folder
-
-  git init
-
 - Add your remote repository url
 
-  git remote add origin <https://github.com/<your username>/<your repo name>.git>
+  `git remote add origin <https://github.com/<your username>/<your repo name>.git>`
 
- `To set the Remote Upstream`
+- Or You can Clone your existing Repository by automatically upstream is set when you clone repo 
 
- git push --set-upstream origin master
+  `git clone < repository url>`
 
- git push -u origin master
+- To set the Remote Upstream because Remote Repo doesn't know about your branch.
+
+  git push --set-upstream origin master
  
- `Do some changes in file and push in repo`
+  git push -u origin master
  
-  nano sample.txt
-  add some content > "hello v1"
-
-  git add sample.txt
-
-  git commit -m "added hello v1"
-
-  git push
-
- `To Create a New Branch and Switch to branch`
+- Do some changes in file and push in repo
  
- git checkout -b dev
+  `nano sample.txt`
+- add some content > "hello v1"
 
- `To Switch to another / Master Branch`
+  `git add sample.txt`
+
+  `git commit -m "added hello v1"`
+
+  `git push`
+
+- To Create a New Branch and Switch to branch`
  
- git checkout master
+  git checkout -b dev
 
-`Merge the Changes to master`
+- To Switch to another / Master Branch
  
- git merge dev
+  `git checkout master`
 
-`To see  the Branches`
+- Merge the Changes to master
  
- git branch
+  `git merge dev`
 
-`To Delete the Branch `
+- To see  the Branches
  
- git branch -d dev
+  `git branch`
 
-`To Pull the Latest Code on repository`
+- To Delete the Branch
  
- git pull
+ `git branch -d dev`
 
-`To revert any commited changes`
+- To Pull the Latest Code on repository
  
- git log
+ `git pull`
 
- git revert <commit_id>
+- To revert any commited changes`
+ 
+ `git log`
 
-`clone the existing repository`
+` git revert <commit_id>`
+
+- clone the existing repository
  
  git clone  <your remote repo name>
  git add 
