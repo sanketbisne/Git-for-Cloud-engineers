@@ -133,24 +133,33 @@ git pull
 - git push 
 
 
-# Dont Track Certain files
+## Dont Track Certain files
 - touch .gitignore
 Add this files to your project(root Directory)
 To exclude certain folders or files from git to be tracked 
 like pycache, .class files, lib , .cache .env, nodemodules
 folders - build/
 
-# To remove files from staging Area
+## To remove files from staging Area
 git restore --staged <filename>   ( for specific file)
 git restore --staged .            ( for all current staged files.)
 
-# To remove specific commit 
+## To remove specific commit 
 git reset --hard 
 
-# To Stash your incomplete work and to move to another branch / Save WIP changes
-if dev branch has  local changes , and you dont want to commit those changes, and want to move into another branch
->>dev branch
-git stash
+## To Stash your incomplete work and to move to another branch / Save WIP changes
+if dev branch has  local changes , and you dont want to commit those changes, and want to move into another branch say master.
+-your current branch -> Dev
+-your incomplete work
+-you  do `git stash` to save your incomplete work in temporary memory
+-now your work is saved 
+-move to another branch say master
+-git checkout master
+-again come to your Dev branch 
+-type `git stash pop` start your work where you left off.
+
+Thank you
+ 
 
 it will take your local changes and store temporary.
 
@@ -159,5 +168,12 @@ it will take your local changes and store temporary.
 
 git stash pop
 
-now you can get back to your work and continue
+now you can get back to your work and continue.
+
+I will add more content like 
+git reset,  git cherry-pick , git reset --hard HEAD~n etc
+
+Thank You
+ 
+ 
 
