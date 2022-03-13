@@ -14,46 +14,46 @@ git config --global user.name <username>
 git config --global user.email <email>
 
 - `Creating a Directory`
- 
-mkdir my-data
+
+   mkdir my-data
 
 - `Navigating to Directory`
- 
-cd   my-data
+
+   cd  my-data
 
 - `Initialize the Repository`
- 
-git init
+
+   git init
 
 - `Create the Sample File`
- 
-touch sample.txt
+
+   touch sample.txt
 
 - `Check the Untracked / Tracked Files`
  
-git status
+   git status
 
 - `Add the files from your working directory to Staging Area (specific file)`
  
-git add sample.txt
+   git add sample.txt
 
 OR 
 
-`Add the files from your working directory to Staging Area(all files)`
+  `Add the files from your working directory to Staging Area(all files)`
  
-git add .
+   git add .
 
 - `Save Changes to Your Local Repository and Capture a Snapshot of staged changes`
  
-git commit -m "Your message here"
+  git commit -m "Your message here"
 
 -`To Display the commit value and shows the history of local repository`
  
-git log
+  git log --oneline --graph 
 
--`Now Add our Google Cloud Source Repository`
+-`Now Lets add our remote repo`
  
-Create a Repository in Google Cloud from the below command or for Console.
+  Create a Repository in Google Cloud / Gitlab / Github / BitBucket from the below command or for Console.
 
 > Go to Github
 
@@ -69,86 +69,92 @@ Create a Repository in Google Cloud from the below command or for Console.
 
 - Create a Folder
 
- mkdir data
+  mkdir data
 
 - initialise Git in that Folder
 
- git init
+  git init
 
 - Add your remote repository url
 
-git remote add origin https://github.com/<your username>/<your repo name>.git
-
+  git remote add origin https://github.com/<your username>/<your repo name>.git
 
 ` To set the Remote Upstream`
  
-> git push --set-upstream origin master
+ git push --set-upstream origin master
 
-> git push -u origin master
+ git push -u origin master
  
 `Do some changes in file and push in repo`
  
-nano sample.txt
-add some content > "hello v1"
+  nano sample.txt
+  add some content > "hello v1"
 
-git add sample.txt
- 
-git commit -m "added hello v1"
- 
-git push
+  git add sample.txt
+
+  git commit -m "added hello v1"
+
+  git push
 
 `To Create a New Branch and Switch to branch`
  
-git checkout -b dev
+ git checkout -b dev
 
 `To Switch to another / Master Branch`
  
-git checkout master
+ git checkout master
 
-` Merge the Changes to master `
+`Merge the Changes to master`
  
-git merge dev
+ git merge dev
 
-` To see  the Branches `
+`To see  the Branches`
  
-git branch
+ git branch
 
-` To Delete the Branch `
+`To Delete the Branch `
  
-git branch -d dev
+ git branch -d dev
 
-` To Pull the Latest Code on repository`
+`To Pull the Latest Code on repository`
  
-git pull
+ git pull
 
-` To revert any commited changes`
+`To revert any commited changes`
  
-- git log
-- git revert <commit_id>
+ git log
+
+ git revert <commit_id>
 
 `clone the existing repository`
  
-- git clone  <your remote repo name>
-- git add 
-- git commit -m "your message"
-- git push 
+ git clone  <your remote repo name>
+ git add 
+ git commit -m "your message"
+ git push 
 
 
 ## Dont Track Certain files
+
 - touch .gitignore
+
 Add this files to your project(root Directory)
+
 To exclude certain folders or files from git to be tracked 
 like pycache, .class files, lib , .cache .env, nodemodules
 folders - build/
 
 ## To remove files from staging Area
+
 git restore --staged <filename>   ( for specific file)
 git restore --staged .            ( for all current staged files.)
 
-## To remove specific commit 
-git reset --hard 
+## To remove specific commit  and delete it
+
+git reset --hard <commit id >
 
 ## To Stash your incomplete work and to move to another branch / Save WIP changes
+
 if dev branch has  local changes , and you dont want to commit those changes, and want to move into another branch say master.
 -your current branch -> Dev
 -your incomplete work
@@ -162,7 +168,7 @@ if dev branch has  local changes , and you dont want to commit those changes, an
 Thank you
  
 I will add more content like 
-git reset,  git cherry-pick , git reset --hard HEAD~n etc
+ git cherry-pick , etc
 
 Thank You
  
