@@ -147,24 +147,28 @@ OR
 
 - To Delete the Branch
  
- `git branch -d dev`
+  `git branch -d dev`
 
 - To Pull the Latest Code on repository
  
- `git pull`
+  `git pull`
 
 - To revert any commited changes`
  
- `git log`
+  `git log`
 
 ` git revert <commit_id>`
 
 - clone the existing repository
  
+ ```
+
  git clone  <your remote repo name>
  git add 
  git commit -m "your message"
  git push 
+
+ ```
 
 
 ## Dont Track Certain files
@@ -179,20 +183,20 @@ folders - build/
 
 ## To remove files from staging Area
 
-git restore --staged <filename>   ( for specific file)
-git restore --staged .            ( for all current staged files.)
+- git restore --staged <filename>   ( for specific file)
+- git restore --staged .            ( for all current staged files.)
 
 ## To remove commit  and delete by one
 
-git reset --hard HEAD~1
+- git reset --hard HEAD~1
 
 ## To remove commit  and move back to staging area
 
-git reset --soft HEAD~1
+- git reset --soft HEAD~1
 
 ## To remove specific commit  and delete it
 
-git reset --hard <commit id >
+- git reset --hard <commit id >
 
 ## To Stash your incomplete work and to move to another branch / Save WIP changes
 
@@ -205,14 +209,61 @@ if dev branch has  local changes , and you dont want to commit those changes, an
 - move to another branch say master
 - git checkout master
 - again come to your Dev branch 
-- type `git stash pop` start your work where you left off. and now you can get back to your work and continue.
+- type "git stash pop" start your work where you left off. and now you can get back to your work and continue.
 
 Thank you
  
-I will add more content like 
- git cherry-pick , etc
+## Git Rebase
 
-Thank You
- 
- 
+If we have 2 branches dev and master and we want dev branch should take the latest code from master branch, instead of merging again and again , we can rebase the dev with master.
 
+now after Rebase , dev branch contain all the recent changes that master branch has
+
+if we are in dev branch, then type
+
+" git rebase master "
+
+When we rebase, we are copying commits from one branch to another.
+So we are generally modifying the git history , as new hash is created.
+
+ 
+Also git rebase allows us to modify the git history on certain branch before rebasing.
+
+if suppose many commits are there on specific branch, then we can combine them into one specific commit.
+
+"git rebase -i HEAD~4"
+```
+
+pick <hash> Added 2nd line
+pick <hash> changes to 2nd line
+pick <hash> more changes to 2nd line
+pick <hash> started 2nd story
+
+```
+
+Here we can see pick option , we need to replace pick with the below lines.
+
+```
+
+pick <hash> Added 2nd line
+squash <hash> changes to 2nd line
+squash <hash> more changes to 2nd line
+squash <hash> started 2nd story
+
+```
+save the changes and exit.
+
+
+now the squash commits -> will be merge with 1st pick  and new specific commit will be created.
+
+
+## Cherry Pick
+
+if we are having specific commit on a different branch, and we want to copy that specific commit into another branch, so in that case cherry pick comes into picture.
+
+
+Go to master -> git checkout master, git log --oneline , copy the commitid.
+
+Go to Dev branch -> git checkout Dev, then git cherry-pick <commit id>
+
+that's it.
