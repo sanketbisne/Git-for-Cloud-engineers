@@ -267,3 +267,16 @@ Go to master -> git checkout master, git log --oneline , copy the commitid.
 Go to Dev branch -> git checkout Dev, then git cherry-pick <commit id>
 
 that's it.
+
+# What if you pushed the changes with wrong Author name?
+
+We can edit the commit through ammend option
+
+```
+
+git commit --amend --author="Sanket <sanketbisne@gmail.com>"  
+
+```
+
+then save the changes, your author name will be edited.
+
